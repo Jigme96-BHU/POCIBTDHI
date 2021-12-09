@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify Power Generated</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<p></p>
+<div class="container">
+    <h2>Total Power Generated</h2>
+    <p>For each station</p>
+    <table id="table" class="table table-striped">
+        <thead>
+        <tr>
+            <th>Station</th>
+            <th>Address</th>
+            <th>Power Generated (GWh)</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<script>
+  const table = $('#table tbody')
+  $.getJSON('/stations').done(data => {
+    $.each(data, function (idx, i) {
+      table.append('<tr><td>' + i.station + '</td><td>' + i.address + '</td><td>' + i.total.toFixed(6) + '</td></tr>')
+    })
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "description": "POC FOR IBT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "jigmetharchen@dhi.bt",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "ganache-cli": "^6.12.2",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.15",
+    "web3": "^1.6.1",
+    "yargs": "^17.3.0",
+    "yarn": "^1.22.17"
+  }
+}

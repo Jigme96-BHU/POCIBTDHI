@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Verify image as a part of blockchain</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card-header">
+            power generated plant
+        </div>
+
+        <div class="card-body">
+            <form method="post" action="/verify" enctype="multipart/form-data">
+                <h5 class="card-title">verify power generated</h5>
+                <div class="form-group">
+                    <label for="image">Select power generated</label>
+                    <input type="file" id="image" name="image" accept="image/jpeg"> 
+                </div>
+                <button type="submit">Upload and Verify</button>
+            </form>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

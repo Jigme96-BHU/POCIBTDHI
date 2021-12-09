@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Power Generation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class= "card-header">
+                Inserting Power Generation Data
+            </div>
+            <div class = "card-body">
+                <form method="post" action="/add" enctype="multipart/form-data">
+                    <h5 class="card-title">Add Daily Power Generation</h5>
+                    <div class="card-group">
+                        <label for="value">Power Generation</label>
+                        <input type="number" id="value" name="value" placeholder="Enter amount in Kilo Watt Hour (KWh)">
+                    </div>
+                    <div class="card-group">
+                        <label for="address">Station Adress:</label>
+                        <select id="address" name="address">
+                            <option>0xd396ef4a05597702040099c34ef0fcaa4c5fbbcf</option>
+                            <option>0xf1630bf4364c03bdc657c6d9cc304b50b0fa61e4</option>
+                            <option>0xd040d6d534999ca80f6de7227b510a1f50a50e20</option>
+                            <option>0xc54a49fd951b1e38801ac726a805ba3a218d005e</option>
+                        </select>
+                    </div>
+                    <div class="card-group">
+                        <label for="image">Upload Image:</label>
+                        <input type="file" id="image" name="image" accept="image/jpeg">
+                    </div>
+                    <div>
+                        <button type="submit">Upload and Add Power Now</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
