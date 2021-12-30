@@ -21,6 +21,7 @@
             <th>Station</th>
             <th>Address</th>
             <th>Power Generated (GWh)</th>
+            <th>Total ether(ETH)</th>
         </tr>
         </thead>
         <tbody>
@@ -31,7 +32,7 @@
   const table = $('#table tbody')
   $.getJSON('/stations').done(data => {
     $.each(data, function (idx, i) {
-      table.append('<tr><td>' + i.station + '</td><td>' + i.address + '</td><td>' + i.total.toFixed(6) + '</td></tr>')
+      table.append('<tr><td>' + i.station + '</td><td>' + i.address + '</td><td>' + i.total.toFixed(6) + '</td><td>' + i.ether + '</td></tr>')
     })
   })
 </script>

@@ -29,6 +29,7 @@ const ganacheServer = ganache.server({
     deterministic: true, 
     mnemonic: 'buzz carbon minute major tackle price green dutch latin window extend sadness',
     db_path: __dirname + '/db',
+    gasPrice: "0x0",
     network_id
 })
 
@@ -50,7 +51,8 @@ app.get('/stations',async(req,res)=>{
         station.push({
             station:`station ${number++}`,
             address,
-            total: (await powerUp.methods.total().call({from: address })/ 1000000)
+            total: (await powerUp.methods.total().call({from: address })/ 1000000),
+            ether: web3.utils.fromWei(await web3.eth.getBalance(address),'ether')
         })
     }
     res.json(station)
